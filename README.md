@@ -2,7 +2,7 @@
 
 This repository contains PoCs for type confusion vulnerabilities in the ChakraCore engine used by Microsoft Edge (EdgeHTML version, not Chromium-based Edge).
 
-The PoCs execute dummy code (specifically an `int 3` followed by `nop`) in a Just-In-Time (JIT) compilation process.
+The PoCs inject dummy code (specifically an `int 3` followed by `nop`) into a Just-In-Time (JIT) compilation process.
 
 To verify the PoCs, attach a debugger to a JIT compilation process (one of the `MicrosoftEdgeCP.exe` processes) and execute the PoCs.
 
